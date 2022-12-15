@@ -8,9 +8,6 @@ body *::after {
   box-sizing: border-box;
 }
 
-[class] {
-  margin: 0;
-}
 
 a {
   color: inherit;
@@ -28,6 +25,8 @@ body {
 
 /* 유연한 미디어 */
 img {
+  /* 원본 크기 이상은 커지지 않게됨(최대치를 제한) */
+  /* 비트맵 이미지는 깨지니까 이렇게 하고 벡터 이미지(svg)는 안깨져서 늘려도 됨 */
   max-width: 100%;
   height: auto;
 }
