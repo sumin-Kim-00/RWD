@@ -204,7 +204,33 @@ input[type="search"] {
     display: none;
   }
 
+  /* 데스크탑 메인 메뉴 */
+  .menu {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-base) var(--spacing-lg);
+    /* line-height: 100px; */
+  }
 
+  .menu__list {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .menu__link {
+    display: block;
+    /* display가 block의 성격을 가지므로 이제 padding 줄 수 있음 */
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--text-md);
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+    color: var(--white);
+    /* 클릭할 수 있는 영역을 넓히기 위해 a태그에 padding줌 */
+  }
 
 
 }
