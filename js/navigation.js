@@ -22,6 +22,7 @@
       var lastItem = menu.querySelector('.menu__list li:last-child a');
       var video = document.querySelector('.news__video');
     
+      // click - 장치 독립적인 이벤트
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         btn.classList.toggle('is--active');
