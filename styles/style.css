@@ -104,9 +104,22 @@ input[type="search"] {
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
+/* 공통 메인 콘텐츠 섹션 제목 */
+[class*="__title"] {
+  background-color: gold;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+[class*="__enTitle"] {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
 /* 공통 추천 서적 */
 .book {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   grid-area: book;
 }
 /* 공통 새소식 */
@@ -124,7 +137,7 @@ input[type="search"] {
   background-color: skyblue;
   grid-area: favorite;
 }
-/* 공통 추천 서적 */
+/* 공통 트위타 */
 .twitter {
   background-color: burlywood;
   grid-area: twitter;
