@@ -36,6 +36,7 @@
 }
 
 /* 공통 검색 폼 */
+/* 이걸 적어줘야만 내가 적어준 border-radius가 작동함 */
 input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
@@ -94,6 +95,13 @@ input[type="search"] {
   display: block;
   font-size: var(--text-md);
   font-weight: 700;
+}
+
+/* 공통 메인 콘텐츠 */
+.appMain {
+  display: grid;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-lg);
 }
 
 
@@ -205,6 +213,20 @@ input[type="search"] {
   .menu.is--active .menu__list {
     transform: none;
   }
+
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;  /* 2 Columns */
+  }
+
+  /* 모바일 새소식(News) */
+.news {
+  /* grid-row: 1/2;
+  grid-column: 1/3; */
+  grid-area: 1/1/2/3;
+}
+
 
 }
 
