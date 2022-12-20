@@ -261,7 +261,6 @@ input[type="search"] {
 }
 
 
-
 /* 공통 인기 사이트 */
 .favorite {
   grid-area: favorite;
@@ -428,6 +427,17 @@ input[type="search"] {
                          "twitter";
   }
 
+  /* 모바일 인기 사이트 */
+  .favorite {
+    margin-top: var(--spacing-lg);
+  }
+
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
+  }
 
 }
 
