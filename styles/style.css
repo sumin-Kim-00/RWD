@@ -102,6 +102,7 @@ input[type="search"] {
   display: grid;
   gap: var(--spacing-base);
   padding: var(--spacing-base) var(--spacing-lg);
+  line-height: 1.5rem;
 }
 
 /* 공통 메인 콘텐츠 섹션 제목 */
@@ -156,10 +157,44 @@ input[type="search"] {
 }
 
 
+/* 공통 메인 콘텐츠 섹션 본문 */
+.appMain [class*="__summary"] {
+  line-height: 1.6;
+  margin-top: var(--spacing-base);
+}
+
 /* 공통 추천 서적 */
 .book {
   grid-area: book;
 }
+
+.book__cover {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.book__info {
+  text-align: center;
+  margin-top: var(--spacing-base);
+}
+
+/* .book__info *  이렇게 해도됨 */
+.book__info dt, dd {
+  display: inline;
+}
+
+.book__info .ratingStar{
+  display: block;
+  font-size: var(--text-xl);
+}
+
 /* 공통 새소식 */
 .news {
   grid-area: news;
@@ -176,6 +211,46 @@ input[type="search"] {
 .twitter {
   grid-area: twitter;
 }
+
+
+
+/* 미리 예습 */
+/* .news__summary {
+  margin-top: 20px;
+  line-height: 1.5rem;
+} */
+
+.news__date{
+  float: right;
+}
+
+/* .book__coverImage {
+  padding: 0 40px;
+}
+
+.book__coverCaption {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.book__info {
+  text-align: center;
+  gap: 5px;
+}
+
+.book__info dt, dd {
+  display: inline-block;
+}
+
+.book__info .ratingStar{
+  display: block;
+  font-size: 1.5rem;
+}
+
+.book__summary {
+  margin-top: 15px;
+} */
+
 
 
 /* 모바일 디바이스 (Mobile Device) */
