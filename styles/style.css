@@ -6,6 +6,12 @@
 
 
 /* 모든 디바이스 (All Device) */
+
+/* 공통 아이콘 (Font Awesome) */
+.far, .fas {
+  margin-right: var(--spacing-xs);
+}
+
 /* 공통 헤더 - 모바일, 데스크탑 공통 */
 .appHeader {
   position: relative;
@@ -199,6 +205,16 @@ input[type="search"] {
 .news {
   grid-area: news;
 }
+
+.news__date{
+  /* float: right;
+  margin-top: var(--spacing-base); */
+  display: block;
+  margin-top: var(--spacing-base);
+  text-align: right;
+}
+
+
 /* 공통 게시판 */
 .board {
   grid-area: board;
@@ -220,9 +236,6 @@ input[type="search"] {
   line-height: 1.5rem;
 } */
 
-.news__date{
-  float: right;
-}
 
 /* .book__coverImage {
   padding: 0 40px;
