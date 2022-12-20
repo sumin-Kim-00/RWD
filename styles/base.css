@@ -31,7 +31,65 @@ img {
   height: auto;
 }
 
-video, iframe {
+video {
   width: 100%;
   height: auto;
+}
+
+/* 반응형 iframe */
+
+.news__videoContainer {
+  width: auto;
+}
+
+/* CSS 속성 중 aspect ratio 쓰면 쉽게 가능(IE 11 지원 X) */
+.iframeWrapper {
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+/* .iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0; */
+  /* padding의 퍼센트 계산은 부모의 width를 기준으로 계산하므로 부모가 1000px이라면 얘는 562px(16:9)와 같음 */
+  /* padding-top: 56.25%; */
+/* } */
+
+/* 영상 비율에 따라 클래스명 다르게 하면 비율 각각 다르게 가능 */
+.iframeRatio-21-9 {
+  /* 둘 중에 아무거나 써도 됨 */
+  padding-top: 42.857142857142855%;
+  /* aspect-ratio: 16/9; */
+}
+.iframeRatio-16-9 {
+  padding-top: 56.25%;
+}
+.iframeRatio-4-3 {
+  padding-top: 75%;
+}
+
+
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 부모크기와 똑같게 */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.iframeWrapper {
+  /* position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; */
+
+}
+
+.iframeWrapper iframe {
+  /* position: absolute;
+  width: 100%;
+  height: 100%; */
 }
