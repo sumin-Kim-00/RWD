@@ -68,6 +68,9 @@ video {
 .iframeRatio-4-3 {
   padding-top: 75%;
 }
+.iframeRatio-1-1 {
+  aspect-ratio: 1/1;
+}
 
 
 .iframeWrapper iframe {

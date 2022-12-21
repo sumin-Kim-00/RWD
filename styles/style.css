@@ -234,7 +234,7 @@ input[type="search"] {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   width: 100%;
 }
 
@@ -265,46 +265,61 @@ input[type="search"] {
 .favorite {
   grid-area: favorite;
 }
-/* 공통 트위타 */
+
+/* 공통 트위터 */
 .twitter {
   grid-area: twitter;
 }
 
+.twitter__userInfo {
+  display: inline-flex;
+  gap: var(--spacing-xs);
+}
 
+
+.twitter__userProfile {
+  /* 고정값 */
+  /* width: 100px;
+  height: 100px;  */
+  
+  /* 유동적인값 */
+  width: 25%;
+  min-width: 3.125rem;
+  max-width: 5.625rem;
+  aspect-ratio: 1/1;  /* 가로세로 1:1 비율 */
+  
+  float: right;
+  shape-outside: circle(50%);
+  margin-left: var(--spacing-xs);
+  
+}
+
+.twitter__userProfileImage {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* background-position과 동작 원리 똑같음 */
+  object-position: 30% 40%;
+}
+
+.twitter__date {
+  display: block;
+  margin-top: var(--spacing-xs);
+}
 
 /* 미리 예습 */
-/* .news__summary {
-  margin-top: 20px;
-  line-height: 1.5rem;
-} */
-
-
-/* .book__coverImage {
-  padding: 0 40px;
-}
-
-.book__coverCaption {
-  margin: 10px 0;
+/* 푸터 */
+.appFooter {
+  background-color: var(--primary-color);
+  color: var(--white);
   text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
-
-.book__info {
-  text-align: center;
-  gap: 5px;
-}
-
-.book__info dt, dd {
-  display: inline-block;
-}
-
-.book__info .ratingStar{
-  display: block;
-  font-size: 1.5rem;
-}
-
-.book__summary {
-  margin-top: 15px;
-} */
 
 
 
@@ -429,7 +444,7 @@ input[type="search"] {
 
   /* 모바일 인기 사이트 */
   .favorite {
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-sm);
   }
 
   .favorite__link::after {
@@ -439,7 +454,43 @@ input[type="search"] {
     margin-left: var(--spacing-xs);
   }
 
+  
+  /* 예습 - 모바일 푸터 */
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+
+  
 }
+
+
+/* 태블릿 디바이스 (Tablet Device) */
+@media (min-width: 640px) and (max-width: 768px) {
+
+  /* 태블릿 메인 콘텐츠 */
+  .appMain {
+    gap: var(--spacing-xl);
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "news news"
+                         "board favorite"
+                         "twitter book";
+  }
+
+  /* 태블릿 인기사이트 */
+  .favorite {
+    margin-top: 0;
+  }
+  
+}
+
+
 
 
 /* 데스크탑 디바이스 (Desktop Device) */
