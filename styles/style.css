@@ -309,8 +309,8 @@ input[type="search"] {
   margin-top: var(--spacing-xs);
 }
 
-/* 미리 예습 */
 /* 푸터 */
+/* 미리 예습 */
 .appFooter {
   background-color: var(--primary-color);
   color: var(--white);
@@ -456,6 +456,10 @@ input[type="search"] {
 
   
   /* 예습 - 모바일 푸터 */
+  .appFooter {
+    font-size: var(--text-sm);
+  }
+
   .address {
     display: flex;
     flex-flow: column nowrap;
@@ -468,6 +472,7 @@ input[type="search"] {
 
   
 }
+
 
 
 /* 태블릿 디바이스 (Tablet Device) */
@@ -489,7 +494,6 @@ input[type="search"] {
   }
   
 }
-
 
 
 
